@@ -15,6 +15,12 @@
   description: Find warnings/errors in C, C++, and Objective-C code
   types_or: [c, c++, c#, objective-c]
   language: python
+- id: clang-tidy-diff
+  name: clang-tidy-diff
+  entry: clang-tidy-diff-hook
+  description: Find warnings/errors in C, C++, and Objective-C code
+  types_or: [c, c++, c#, objective-c]
+  language: python
 - id: oclint
   name: oclint
   entry: oclint-hook
