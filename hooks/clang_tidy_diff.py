@@ -10,7 +10,7 @@ from hooks.utils import StaticAnalyzerCmd
 class ClangTidyDiffCmd(StaticAnalyzerCmd):
     """Class for the clang-tidy command."""
 
-    command = "clang-tidy-diff"
+    command = "git diff -U0 HEAD^ | $REBEL_DEPENDENCY/share/clang/clang-tidy-diff.py -p1"
     lookbehind = "LLVM version "
 
     def __init__(self, args: List[str]):
