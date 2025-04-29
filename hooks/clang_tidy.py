@@ -21,6 +21,7 @@ class ClangTidyCmd(StaticAnalyzerCmd):
     def run(self):
         """Run clang-tidy. If --fix-errors is passed in, then return code will be 0, even if there are errors."""
         for filename in self.files:
+            print([filename] + self.args)
             self.run_command([filename] + self.args)
             # Warnings generated aren't important.
             self.stderr = re.sub(rb"[\d,]+ warning \S+\s+", b"", self.stderr)
